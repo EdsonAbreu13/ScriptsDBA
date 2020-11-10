@@ -1,0 +1,7 @@
+shutdown -s -f -t 3600 
+Tempo em seg.
+
+Para caneclar
+Shotdown -a
+
+De <https://tecnoblog.net/268119/como-programar-o-pc-para-desligar-sozinho/> 

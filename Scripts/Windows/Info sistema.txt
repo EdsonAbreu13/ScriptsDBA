@@ -1,0 +1,6 @@
+-- informações do sistema
+SYSTEMINFO.exe
+
+
+-- procurar uma atualização especifica aplicada ao windows
+ SYSTEMINFO.exe | findstr KB2894856

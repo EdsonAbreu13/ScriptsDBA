@@ -1,0 +1,7 @@
+	Ø Resolva o erro de autenticação CREDSSP via Regedit
+	https://hubdati.com.br/resolva-o-erro-de-autenticacao-credssp-via-regedit/
+	
+	CMD ADMIN
+	REG  ADD   HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters\  /v AllowEncryptionOracle /t REG_DWORD /d 2
+	
+	

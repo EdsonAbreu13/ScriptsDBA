@@ -1,0 +1,27 @@
+ Logical Disk 
+
+        Avg Disk Sec/Read - Validar se a latência do disco está dentro da expectativa. Em geral, adotam-se valores máximos de 50 a 100ms como tempo de respostas para o disco de dados. Uma sugestão de tempos: 
+
+    <1ms : inacreditável
+    <3ms : excelente
+    <5ms : muito bom
+    <10ms : dentro do esperado
+    <20ms : razoável
+    <50ms : limite
+    >100ms : ruim
+    > 1 seg : contenção severa de disco
+    > 15 seg : problemas graves com o storage 
+
+        Avg Disk Sec/Transfer - Média ponderada entre os tempos de leitura e escrita. Utilizar esse contador quando precisar de uma análise simplificada sem a necessidade de olhar dois contadores (Read e Write) ao mesmo tempo. 
+
+        Avg Disk Sec/Write - Validar se a latência do disco está dentro da expectativa. Ignore esse valor para os discos de dados. Utilize esse contador para os discos de log com latências reduzidas:
+
+ 
+    <1ms : excelente
+    <3ms : bom
+    <5ms : razoável
+    <10ms : limite
+    >20ms : ruim 
+
+    > 1 seg : contenção severa de disco
+    > 15 seg : problemas graves com o storage
