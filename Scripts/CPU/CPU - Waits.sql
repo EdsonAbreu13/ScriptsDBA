@@ -1,6 +1,8 @@
 
 exec sp_whoisactive --@get_task_info =2, @get_plans = 1, @delta_interval = 1, @show_sleeping_spids = 0, @get_outer_command = 1
 
+select * from sys. dm_exec_session_wait_stats where session_id = 
+
 ;WITH [Waits] AS
     (SELECT
         [wait_type],
