@@ -46,3 +46,12 @@ select * from (
 where ord=1
 order by  Dt_Log desc
 
+select cast(dt_log as date), min(IO_Pending_ms),avg(IO_Pending_ms),max(IO_Pending_ms) from (
+	select Id_Log_IO_Pending, Nm_Database, Physical_Name, IO_Pending, IO_Pending_ms,IO_Type, Number_Reads,Number_Writes,Dt_Log, 
+		ROW_NUMBER () OVER(PARTITION BY Dt_Log,Nm_Database,Physical_Name ORDER BY IO_Pending_ms DESC) ord
+		from Log_IO_Pending where Nm_Database= 'tempdb' and Dt_Log >= '20201101 00:00')x
+where ord=1
+group by cast(dt_log as date)
+order by  cast(dt_log as date) desc
+
+

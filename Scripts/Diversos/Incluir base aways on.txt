@@ -1,0 +1,53 @@
+aways on
+	availability databases
+			bortao direito add databases
+			
+			
+			
+			
+	PREREQUISITOS :
+				
+	alter database KurierBaseCPF set recovery full
+
+	backup database KurierBaseCPF
+	to disk = 'NUL' -- WINDOWS JOGA PARA UM "LIMBO"
+
+
+connect na replica
+
+escolha opção de replicação 
+Automatic Seeding (>=2016)
+
+
+
+--- YOU MUST EXECUTE THE FOLLOWING SCRIPT IN SQLCMD MODE.
+:Connect PINA
+
+USE [master]
+
+GO
+
+ALTER AVAILABILITY GROUP [AG_KURIER]
+MODIFY REPLICA ON N'SERRAMBI' WITH (SEEDING_MODE = AUTOMATIC)
+
+GO
+
+USE [master]
+
+GO
+
+ALTER AVAILABILITY GROUP [AG_KURIER]
+ADD DATABASE [KurierBaseCPF];
+
+GO
+
+:Connect SERRAMBI
+
+ALTER AVAILABILITY GROUP [AG_KURIER] GRANT CREATE ANY DATABASE;
+
+GO
+
+
+GO
+
+
