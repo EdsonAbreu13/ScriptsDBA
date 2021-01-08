@@ -1,0 +1,1 @@
+select CAST(StartTime as date)Date, AVG(Duration) Duration,AVG(Reads)Reads, AVG(CPU)CPU from Queries_Profile where TextData like 'DECLARE @P1%CT2_FILIAL FROM%CT2010%'  group by cast(starttime as date) order by 1 desc
