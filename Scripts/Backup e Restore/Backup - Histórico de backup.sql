@@ -6,6 +6,7 @@ FROM msdb.dbo.backupset B
 where 1=1
 --  and backup_start_date >=  dateadd(hh, -24 ,getdate()  )
 --  and type in ('D','I')
+ and database_name = ''
 order by backup_start_date desc
 
 

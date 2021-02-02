@@ -3,6 +3,21 @@ exec sp_whoisactive --@get_task_info =2, @get_plans = 1, @delta_interval = 1, @s
 
 select * from sys. dm_exec_session_wait_stats where session_id = 
 
+
+select 
+	session_id
+	,wait_type
+	,wait_time_ms
+	,floor(wait_time_ms / (1000 * 60 * 60 * 24)) as days,
+       floor(wait_time_ms / (1000 * 60 * 60)) % 24 as hours,
+       floor(wait_time_ms / (1000 * 60)) % 60 as minutes
+from sys. dm_exec_session_wait_stats 
+where 1=1
+and wait_type = 'ASYNC_NETWORK_IO'
+and session_id in()
+
+
+
 ;WITH [Waits] AS
     (SELECT
         [wait_type],
