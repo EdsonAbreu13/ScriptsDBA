@@ -27,6 +27,11 @@ FROM #ESPACO_DATABASES
 
 ----------------------
 
+
+SELECT name, size = size/128.0,max_size,type_desc FROM sys.database_files 
+
+----------------------
+
  IF (OBJECT_ID('tempdb..#Alert_MDFs_Sizes') IS NOT NULL)  
   DROP TABLE #Alert_MDFs_Sizes  
      
