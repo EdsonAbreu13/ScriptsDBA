@@ -1,29 +1,74 @@
-
-
 IF OBJECT_ID('tempdb..#ESPACO_DATABASES') IS NOT NULL
 	DROP TABLE #ESPACO_DATABASES
 CREATE TABLE #ESPACO_DATABASES (
 	 DRIVE CHAR(1)
+	,BASE SYSNAME
 	,TAMANHO_ARQUIVO DECIMAL(15, 2)
 	,ESPACO_UTILIZADO DECIMAL(15, 2)
 	,ESPACO_LIVRE DECIMAL(15, 2)
+	,PORCENTAGEM_LIVRE DECIMAL(15, 2)
 	,ARQUIVO VARCHAR(100)
 	,CAMINHO_ARQUIVO VARCHAR(255)
 	)
 INSERT INTO #ESPACO_DATABASES
 EXEC master.sys.sp_MSforeachdb ' USE [?];
    SELECT  SUBSTRING(A.FILENAME, 1, 1) AS DRIVE
+	  ,''[?]'' AS BASE
 	  ,CONVERT(DECIMAL(12, 2), ROUND(A.SIZE / 128.000, 2)) AS TAMANHO_ARQUIVO
 	  ,CONVERT(DECIMAL(12, 2), ROUND(FILEPROPERTY(A.NAME, ''SPACEUSED'') / 128.000, 2)) AS ESPACO_UTILIZADO
 	  ,CONVERT(DECIMAL(12, 2), ROUND((A.SIZE - FILEPROPERTY(A.NAME, ''SPACEUSED'')) / 128.000, 2)) AS ESPACO_LIVRE
+	  ,(CONVERT(DECIMAL(12, 2), ROUND((A.SIZE - FILEPROPERTY(A.NAME, ''SPACEUSED'')) / 128.000, 2)) / CONVERT(DECIMAL(12, 2), ROUND(A.SIZE / 128.000, 2)))*100 AS PORCENTAGEM_LIVRE
 	  ,A.NAME AS ARQUIVO
 	  ,A.FILENAME AS CAMINHO_ARQUIVO
 	FROM dbo.sysfiles A
 	ORDER BY ARQUIVO
 		,DRIVE
    '
-SELECT *
-FROM #ESPACO_DATABASES
+
+SELECT * FROM #ESPACO_DATABASES 
+
+
+
+--------------------
+SELECT CONVERT(VARCHAR(25), DB.name) AS [Database],
+	 (SELECT COUNT(1) FROM sys.master_files WHERE DB_NAME(database_id) = DB.name AND type_desc = 'rows') AS [Data Files],
+	 (SELECT SUM((size*8)/1024) FROM sys.master_files WHERE DB_NAME(database_id) = DB.name AND type_desc = 'rows') AS [Data MB],
+	 (SELECT COUNT(1) FROM sys.master_files WHERE DB_NAME(database_id) = DB.name AND type_desc = 'log') AS [Log Files],
+	 (SELECT SUM((size*8)/1024) FROM sys.master_files WHERE DB_NAME(database_id) = DB.name AND type_desc = 'log') AS [Log MB],
+	 (SELECT SUM((size*8)/1024) FROM sys.master_files WHERE DB_NAME(database_id) = DB.name AND type_desc = 'log')*100/
+	 (SELECT SUM((size*8)/1024) FROM sys.master_files WHERE DB_NAME(database_id) = DB.name AND type_desc = 'rows') [Diff Data Log (%)]
+	-- INTO #Database_Files
+  FROM sys.databases DB	 
+	ORDER BY [Diff Data Log (%)] DESC
+
+
+---------------------
+-- BASE ATUAL INFO DETALHADA:
+SELECT
+    DatabaseName = DB_NAME()
+	,FilegroupName = FG.name
+	,F.file_id
+    ,F.physical_name
+    ,F.name
+    ,F.file_id
+    ,SizeGB = F.size/131072
+    ,UsedGB = FILEPROPERTY(F.name,'SpaceUsed')/131072
+    ,L.*
+FROM
+    sys.database_files F
+    OUTER APPLY (
+        SELECT
+            LobGB = ISNULL(SUM(CASE WHEN AU.type_desc = 'LOB_DATA' THEN AU.total_pages ELSE 0 END)/131072,0)
+			,RowOverflowGB = ISNULL(SUM(CASE WHEN AU.type_desc = 'ROW_OVERFLOW_DATA' THEN AU.total_pages ELSE 0 END)/131072,0)
+        FROM
+            sys.allocation_units AU
+        WHERE
+            AU.data_space_id = F.data_space_id
+    ) L
+	JOIN
+	sys.filegroups FG
+		ON FG.data_space_id = F.data_space_id
+
 
 ----------------------
 

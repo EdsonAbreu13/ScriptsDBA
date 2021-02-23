@@ -5,14 +5,18 @@ SELECT * FROM sys.dm_exec_query_memory_grants
 select top 10 * from sys.dm_exec_query_memory_grants
 
 
-
 A saída deste DMV retorna duas linhas, uma para grandes consultas (resource_semaphore_id é 0) e outra para pequenas consultas (resource_semaphore_id é 1) 
 Veja os números em grantee_count e waiter_count , o grantee_count é o número de consultas que têm sua memória e o waiter_count é o número de quires que estão esperando na fila para obter memória. 
 
 https://www.mssqltips.com/sqlservertip/2827/troubleshooting-sql-server-resourcesemaphore-waittype-memory-issues/
 
 
+------------------------------------------------------
+Tabelas com mais de 10% do Max Server Memory, ao fazer scan são marcadas como Page Disfavoring no buffer pool da memória, isso faz com que ela seja uma das primeiras a sair da memória caso tenha alocação a ser feita e não tiver espaço.
 
+
+
+------------------------------------------------------
 
 --Verifica o PLE de dentro do SQL Server
 SELECT

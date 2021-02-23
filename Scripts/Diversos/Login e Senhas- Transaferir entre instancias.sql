@@ -1,0 +1,1 @@
+https://docs.microsoft.com/pt-br/troubleshoot/sql/security/transfer-logins-passwords-between-instances
