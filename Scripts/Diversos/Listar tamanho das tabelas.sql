@@ -20,3 +20,29 @@ s.[name],
 p.[rows]
 ORDER BY
 [size_mb] DESC
+
+
+==============================
+
+/*valores em KB se quiser transformar p/ MB divide por 1024 e se quiser ir de MB para GB divide por mais 1024*/
+
+SELECT
+    OBJECT_NAME(object_id) As Tabela, Rows As Linhas,
+    SUM(Total_Pages * 8) As Reservado,
+    SUM(CASE WHEN Index_ID > 1 THEN 0 ELSE Data_Pages * 8 END) As Dados,
+        SUM(Used_Pages * 8) -
+        SUM(CASE WHEN Index_ID > 1 THEN 0 ELSE Data_Pages * 8 END) As Indice,
+    SUM((Total_Pages - Used_Pages) * 8) As NaoUtilizado
+	into #tamanho1
+FROM
+    sys.partitions As P
+    INNER JOIN sys.allocation_units As A ON P.hobt_id = A.container_id
+	--where OBJECT_NAME(object_id) like 'bkp032017%'
+GROUP BY OBJECT_NAME(object_id), Rows
+ORDER BY LINHAS DESC
+
+
+
+
+select Tabela, Linhas, Reservado/1024/1024 reservado_GB, Dados/1024/1024 dados_GB, Indice/1024/1024 indice_GB, NaoUtilizado/1024/1024 naoutilizado_GB from #tamanho1
+order by Reservado desc

@@ -1,0 +1,374 @@
+Products installed on the local system
+ 
+ 
+================================================================================
+PRODUCT NAME   : Microsoft OLE DB Driver for SQL Server
+================================================================================
+  Product Code: {74A97B61-DE37-40DF-9E00-B302E5D3C4CE}
+  Version     : 18.3.0.0
+  Most Current Install Date: 20201117
+  Target Install Location: 
+  Registry Path: 
+   HKEY_CLASSES_ROOT\Installer\Products\16B79A4773EDFD04E9003B205E3D4CEC\SourceList
+     Package    : msoledbsql.msi
+  Install Source: \1033_ENU_LP\x64\Setup\x64\
+  LastUsedSource: n;1;C:\ProgramData\Package Cache\{74A97B61-DE37-40DF-9E00-B302E5D3C4CE}v18.3.0.0\x64\
+ 
+    msoledbsql.msi exists on the LastUsedSource path, no actions needed.
+ 
+Installer Cache File: C:\Windows\Installer\13be502.msi
+ 
+    Package exists in the Installer cache, no actions needed.
+    Any missing packages will update automatically if needed assuming that
+    the LastUsedSource exists.
+ 
+    Should you get errors about C:\Windows\Installer\13be502.msi or C:\ProgramData\Package Cache\{74A97B61-DE37-40DF-9E00-B302E5D3C4CE}v18.3.0.0\x64\msoledbsql.msi then you
+    may need to manually copy the file, if file exists replace the problem file, 
+    Copy and paste the following command line into an administrative command prompt:
+ 
+     Copy "C:\ProgramData\Package Cache\{74A97B61-DE37-40DF-9E00-B302E5D3C4CE}v18.3.0.0\x64\msoledbsql.msi" C:\Windows\Installer\13be502.msi
+ 
+ 
+Microsoft OLE DB Driver for SQL Server Patches Installed 
+--------------------------------------------------------------------------------
+ 
+  No Patches Found
+ 
+================================================================================
+PRODUCT NAME   : SQL Server Management Studio
+================================================================================
+  Product Code: {66C26B42-AE10-45D8-A105-3DACBE959F3A}
+  Version     : 15.0.18358.0
+  Most Current Install Date: 20201117
+  Target Install Location: 
+  Registry Path: 
+   HKEY_CLASSES_ROOT\Installer\Products\24B62C6601EA8D541A50D3CAEB59F9A3\SourceList
+     Package    : sql_ssms.msi
+  Install Source: \Setup\
+  LastUsedSource: n;1;C:\ProgramData\Package Cache\{66C26B42-AE10-45D8-A105-3DACBE959F3A}v15.0.18358.0\x64\
+ 
+    sql_ssms.msi exists on the LastUsedSource path, no actions needed.
+ 
+Installer Cache File: C:\Windows\Installer\13be554.msi
+ 
+    Package exists in the Installer cache, no actions needed.
+    Any missing packages will update automatically if needed assuming that
+    the LastUsedSource exists.
+ 
+    Should you get errors about C:\Windows\Installer\13be554.msi or C:\ProgramData\Package Cache\{66C26B42-AE10-45D8-A105-3DACBE959F3A}v15.0.18358.0\x64\sql_ssms.msi then you
+    may need to manually copy the file, if file exists replace the problem file, 
+    Copy and paste the following command line into an administrative command prompt:
+ 
+     Copy "C:\ProgramData\Package Cache\{66C26B42-AE10-45D8-A105-3DACBE959F3A}v15.0.18358.0\x64\sql_ssms.msi" C:\Windows\Installer\13be554.msi
+ 
+ 
+SQL Server Management Studio Patches Installed 
+--------------------------------------------------------------------------------
+ 
+  No Patches Found
+ 
+================================================================================
+PRODUCT NAME   : Microsoft SQL Server 2008 Setup Support Files 
+================================================================================
+  Product Code: {D441BD04-E548-4F8E-97A4-1B66135BAAA8}
+  Version     : 10.1.2731.0
+  Most Current Install Date: 20210108
+  Target Install Location: 
+  Registry Path: 
+   HKEY_CLASSES_ROOT\Installer\Products\40DB144D845EE8F4794AB16631B5AA8A\SourceList
+     Package    : SQLSUPPORT.MSI
+  Install Source: \1033_ENU_LP\x86\setup\sql2008support\
+  LastUsedSource: n;1;D:\17f2367ef5b54f0e3a369aaae371c387\1033_ENU_LP\x86\setup\sql2008support\
+ 
+ !!!! SQLSUPPORT.MSI DOES NOT exist on the path in the path D:\17f2367ef5b54f0e3a369aaae371c387\1033_ENU_LP\x86\setup\sql2008support\ !!!!
+ 
+ Action needed, re-establish the path to D:\17f2367ef5b54f0e3a369aaae371c387\1033_ENU_LP\x86\setup\sql2008support\
+ 
+Installer Cache File: C:\Windows\Installer\809c5049.msi
+ 
+    Package exists in the Installer cache, no actions needed.
+    Any missing packages will update automatically if needed assuming that
+    the LastUsedSource exists.
+ 
+    Should you get errors about C:\Windows\Installer\809c5049.msi or D:\17f2367ef5b54f0e3a369aaae371c387\1033_ENU_LP\x86\setup\sql2008support\SQLSUPPORT.MSI then you
+    may need to manually copy the file, if file exists replace the problem file, 
+    Copy and paste the following command line into an administrative command prompt:
+ 
+     Copy "D:\17f2367ef5b54f0e3a369aaae371c387\1033_ENU_LP\x86\setup\sql2008support\SQLSUPPORT.MSI" C:\Windows\Installer\809c5049.msi
+ 
+ 
+Microsoft SQL Server 2008 Setup Support Files  Patches Installed 
+--------------------------------------------------------------------------------
+ 
+  No Patches Found
+ 
+================================================================================
+PRODUCT NAME   : SQL Server Management Studio
+================================================================================
+  Product Code: {E98F3E26-D9C6-41B7-9004-90E06D45807B}
+  Version     : 15.0.18358.0
+  Most Current Install Date: 20201117
+  Target Install Location: 
+  Registry Path: 
+   HKEY_CLASSES_ROOT\Installer\Products\62E3F89E6C9D7B140940090ED65408B7\SourceList
+     Package    : sql_ssms_loc.msi
+  Install Source: \Setup\
+  LastUsedSource: n;1;C:\ProgramData\Package Cache\{E98F3E26-D9C6-41B7-9004-90E06D45807B}v15.0.18358.0\x64\
+ 
+    sql_ssms_loc.msi exists on the LastUsedSource path, no actions needed.
+ 
+Installer Cache File: C:\Windows\Installer\13be558.msi
+ 
+    Package exists in the Installer cache, no actions needed.
+    Any missing packages will update automatically if needed assuming that
+    the LastUsedSource exists.
+ 
+    Should you get errors about C:\Windows\Installer\13be558.msi or C:\ProgramData\Package Cache\{E98F3E26-D9C6-41B7-9004-90E06D45807B}v15.0.18358.0\x64\sql_ssms_loc.msi then you
+    may need to manually copy the file, if file exists replace the problem file, 
+    Copy and paste the following command line into an administrative command prompt:
+ 
+     Copy "C:\ProgramData\Package Cache\{E98F3E26-D9C6-41B7-9004-90E06D45807B}v15.0.18358.0\x64\sql_ssms_loc.msi" C:\Windows\Installer\13be558.msi
+ 
+ 
+SQL Server Management Studio Patches Installed 
+--------------------------------------------------------------------------------
+ 
+  No Patches Found
+ 
+================================================================================
+PRODUCT NAME   : SQL Server Management Studio for Analysis Services
+================================================================================
+  Product Code: {690C4976-A775-41F7-88B1-F67677DE05F1}
+  Version     : 15.0.18358.0
+  Most Current Install Date: 20201117
+  Target Install Location: 
+  Registry Path: 
+   HKEY_CLASSES_ROOT\Installer\Products\6794C096577A7F14881B6F6777ED501F\SourceList
+     Package    : ssms_as.msi
+  Install Source: \Setup\
+  LastUsedSource: n;1;C:\ProgramData\Package Cache\{690C4976-A775-41F7-88B1-F67677DE05F1}v15.0.18358.0\x64\
+ 
+    ssms_as.msi exists on the LastUsedSource path, no actions needed.
+ 
+Installer Cache File: C:\Windows\Installer\13be560.msi
+ 
+    Package exists in the Installer cache, no actions needed.
+    Any missing packages will update automatically if needed assuming that
+    the LastUsedSource exists.
+ 
+    Should you get errors about C:\Windows\Installer\13be560.msi or C:\ProgramData\Package Cache\{690C4976-A775-41F7-88B1-F67677DE05F1}v15.0.18358.0\x64\ssms_as.msi then you
+    may need to manually copy the file, if file exists replace the problem file, 
+    Copy and paste the following command line into an administrative command prompt:
+ 
+     Copy "C:\ProgramData\Package Cache\{690C4976-A775-41F7-88B1-F67677DE05F1}v15.0.18358.0\x64\ssms_as.msi" C:\Windows\Installer\13be560.msi
+ 
+ 
+SQL Server Management Studio for Analysis Services Patches Installed 
+--------------------------------------------------------------------------------
+ 
+  No Patches Found
+ 
+================================================================================
+PRODUCT NAME   : Microsoft SQL Server 2012 Native Client 
+================================================================================
+  Product Code: {9D93D367-A2CC-4378-BD63-79EF3FE76C78}
+  Version     : 11.4.7462.6
+  Most Current Install Date: 20201117
+  Target Install Location: 
+  Registry Path: 
+   HKEY_CLASSES_ROOT\Installer\Products\763D39D9CC2A8734DB3697FEF37EC687\SourceList
+     Package    : sqlncli.msi
+  Install Source: \1033_ENU_LP\x64\Setup\x64\
+  LastUsedSource: n;1;C:\ProgramData\Package Cache\{9D93D367-A2CC-4378-BD63-79EF3FE76C78}v11.4.7462.6\x64\
+ 
+    sqlncli.msi exists on the LastUsedSource path, no actions needed.
+ 
+Installer Cache File: C:\Windows\Installer\13be4a9.msi
+ 
+    Package exists in the Installer cache, no actions needed.
+    Any missing packages will update automatically if needed assuming that
+    the LastUsedSource exists.
+ 
+    Should you get errors about C:\Windows\Installer\13be4a9.msi or C:\ProgramData\Package Cache\{9D93D367-A2CC-4378-BD63-79EF3FE76C78}v11.4.7462.6\x64\sqlncli.msi then you
+    may need to manually copy the file, if file exists replace the problem file, 
+    Copy and paste the following command line into an administrative command prompt:
+ 
+     Copy "C:\ProgramData\Package Cache\{9D93D367-A2CC-4378-BD63-79EF3FE76C78}v11.4.7462.6\x64\sqlncli.msi" C:\Windows\Installer\13be4a9.msi
+ 
+ 
+Microsoft SQL Server 2012 Native Client  Patches Installed 
+--------------------------------------------------------------------------------
+ 
+  No Patches Found
+ 
+================================================================================
+PRODUCT NAME   : Microsoft ODBC Driver 17 for SQL Server
+================================================================================
+  Product Code: {E36FFC78-D25E-4962-872B-9CE0E50E62CD}
+  Version     : 17.5.1.1
+  Most Current Install Date: 20201117
+  Target Install Location: 
+  Registry Path: 
+   HKEY_CLASSES_ROOT\Installer\Products\87CFF63EE52D269478B2C90E5EE026DC\SourceList
+     Package    : msodbcsql.msi
+  Install Source: \1033_ENU_LP\x64\Setup\x64\
+  LastUsedSource: n;1;C:\ProgramData\Package Cache\{E36FFC78-D25E-4962-872B-9CE0E50E62CD}v17.5.1.1\x64\
+ 
+    msodbcsql.msi exists on the LastUsedSource path, no actions needed.
+ 
+Installer Cache File: C:\Windows\Installer\13be4df.msi
+ 
+    Package exists in the Installer cache, no actions needed.
+    Any missing packages will update automatically if needed assuming that
+    the LastUsedSource exists.
+ 
+    Should you get errors about C:\Windows\Installer\13be4df.msi or C:\ProgramData\Package Cache\{E36FFC78-D25E-4962-872B-9CE0E50E62CD}v17.5.1.1\x64\msodbcsql.msi then you
+    may need to manually copy the file, if file exists replace the problem file, 
+    Copy and paste the following command line into an administrative command prompt:
+ 
+     Copy "C:\ProgramData\Package Cache\{E36FFC78-D25E-4962-872B-9CE0E50E62CD}v17.5.1.1\x64\msodbcsql.msi" C:\Windows\Installer\13be4df.msi
+ 
+ 
+Microsoft ODBC Driver 17 for SQL Server Patches Installed 
+--------------------------------------------------------------------------------
+ 
+  No Patches Found
+ 
+================================================================================
+PRODUCT NAME   : SQL Server 2019 Serviço de Linguagem T-SQL  da Microsoft
+================================================================================
+  Product Code: {6700CE59-D126-4829-BD0A-3E346ED49A5A}
+  Version     : 15.0.2000.5
+  Most Current Install Date: 20201117
+  Target Install Location: 
+  Registry Path: 
+   HKEY_CLASSES_ROOT\Installer\Products\95EC0076621D9284DBA0E343E64DA9A5\SourceList
+     Package    : TSQLLANGUAGESERVICE.MSI
+  Install Source: \1046_PTB_LP\x64\setup\x64\
+  LastUsedSource: n;1;C:\SQL2019\Developer_PTB\1046_PTB_LP\x64\setup\x64\
+ 
+ !!!! TSQLLANGUAGESERVICE.MSI DOES NOT exist on the path in the path C:\SQL2019\Developer_PTB\1046_PTB_LP\x64\setup\x64\ !!!!
+ 
+ Action needed, re-establish the path to C:\SQL2019\Developer_PTB\1046_PTB_LP\x64\setup\x64\
+ 
+Installer Cache File: C:\Windows\Installer\fba103.msi
+ 
+    Package exists in the Installer cache, no actions needed.
+    Any missing packages will update automatically if needed assuming that
+    the LastUsedSource exists.
+ 
+    Should you get errors about C:\Windows\Installer\fba103.msi or C:\SQL2019\Developer_PTB\1046_PTB_LP\x64\setup\x64\TSQLLANGUAGESERVICE.MSI then you
+    may need to manually copy the file, if file exists replace the problem file, 
+    Copy and paste the following command line into an administrative command prompt:
+ 
+     Copy "C:\SQL2019\Developer_PTB\1046_PTB_LP\x64\setup\x64\TSQLLANGUAGESERVICE.MSI" C:\Windows\Installer\fba103.msi
+ 
+ 
+SQL Server 2019 Serviço de Linguagem T-SQL  da Microsoft Patches Installed 
+--------------------------------------------------------------------------------
+ 
+  No Patches Found
+ 
+================================================================================
+PRODUCT NAME   : Microsoft SQL Server 2012 Transact-SQL ScriptDom 
+================================================================================
+  Product Code: {E721A8AA-2632-4798-B439-6D4C8A689BB8}
+  Version     : 11.2.5058.0
+  Most Current Install Date: 20210108
+  Target Install Location: 
+  Registry Path: 
+   HKEY_CLASSES_ROOT\Installer\Products\AA8A127E236289744B93D6C4A886B98B\SourceList
+     Package    : SQLDOM.MSI
+  Install Source: 
+  LastUsedSource: n;1;C:\Program Files (x86)\Microsoft SQL Server\110\Setup Bootstrap\Update Cache\KB2958429\ServicePack\1033_ENU_LP\x86\setup\x64\
+ 
+ !!!! SQLDOM.MSI DOES NOT exist on the path in the path C:\Program Files (x86)\Microsoft SQL Server\110\Setup Bootstrap\Update Cache\KB2958429\ServicePack\1033_ENU_LP\x86\setup\x64\ !!!!
+ 
+ Action needed, re-establish the path to C:\Program Files (x86)\Microsoft SQL Server\110\Setup Bootstrap\Update Cache\KB2958429\ServicePack\1033_ENU_LP\x86\setup\x64\
+ 
+Installer Cache File: C:\Windows\Installer\809c5067.msi
+ 
+    Package exists in the Installer cache, no actions needed.
+    Any missing packages will update automatically if needed assuming that
+    the LastUsedSource exists.
+ 
+    Should you get errors about C:\Windows\Installer\809c5067.msi or C:\Program Files (x86)\Microsoft SQL Server\110\Setup Bootstrap\Update Cache\KB2958429\ServicePack\1033_ENU_LP\x86\setup\x64\SQLDOM.MSI then you
+    may need to manually copy the file, if file exists replace the problem file, 
+    Copy and paste the following command line into an administrative command prompt:
+ 
+     Copy "C:\Program Files (x86)\Microsoft SQL Server\110\Setup Bootstrap\Update Cache\KB2958429\ServicePack\1033_ENU_LP\x86\setup\x64\SQLDOM.MSI" C:\Windows\Installer\809c5067.msi
+ 
+ 
+Microsoft SQL Server 2012 Transact-SQL ScriptDom  Patches Installed 
+--------------------------------------------------------------------------------
+ 
+  No Patches Found
+ 
+================================================================================
+PRODUCT NAME   : SQL Server Management Studio for Reporting Services
+================================================================================
+  Product Code: {1A77173C-B256-4063-9EC1-CCBD9C42DF64}
+  Version     : 15.0.18358.0
+  Most Current Install Date: 20201117
+  Target Install Location: 
+  Registry Path: 
+   HKEY_CLASSES_ROOT\Installer\Products\C37177A1652B3604E91CCCDBC924FD46\SourceList
+     Package    : ssms_rs.msi
+  Install Source: \Setup\
+  LastUsedSource: n;1;C:\ProgramData\Package Cache\{1A77173C-B256-4063-9EC1-CCBD9C42DF64}v15.0.18358.0\x64\
+ 
+    ssms_rs.msi exists on the LastUsedSource path, no actions needed.
+ 
+Installer Cache File: C:\Windows\Installer\13be55c.msi
+ 
+    Package exists in the Installer cache, no actions needed.
+    Any missing packages will update automatically if needed assuming that
+    the LastUsedSource exists.
+ 
+    Should you get errors about C:\Windows\Installer\13be55c.msi or C:\ProgramData\Package Cache\{1A77173C-B256-4063-9EC1-CCBD9C42DF64}v15.0.18358.0\x64\ssms_rs.msi then you
+    may need to manually copy the file, if file exists replace the problem file, 
+    Copy and paste the following command line into an administrative command prompt:
+ 
+     Copy "C:\ProgramData\Package Cache\{1A77173C-B256-4063-9EC1-CCBD9C42DF64}v15.0.18358.0\x64\ssms_rs.msi" C:\Windows\Installer\13be55c.msi
+ 
+ 
+SQL Server Management Studio for Reporting Services Patches Installed 
+--------------------------------------------------------------------------------
+ 
+  No Patches Found
+ 
+================================================================================
+PRODUCT NAME   : Microsoft SQL Server 2012 Setup (English)
+================================================================================
+  Product Code: {D958C1AC-7891-42B6-AFBE-FA9070FACE13}
+  Version     : 11.2.5058.0
+  Most Current Install Date: 20210108
+  Target Install Location: 
+  Registry Path: 
+   HKEY_CLASSES_ROOT\Installer\Products\CA1C859D19876B24FAEBAF0907AFEC31\SourceList
+     Package    : SQLSUPPORT.MSI
+  Install Source: \Setup\
+  LastUsedSource: n;1;D:\17f2367ef5b54f0e3a369aaae371c387\PCUSOURCE\1033_ENU_LP\x86\setup\sqlsupport_msi\
+ 
+ !!!! SQLSUPPORT.MSI DOES NOT exist on the path in the path D:\17f2367ef5b54f0e3a369aaae371c387\PCUSOURCE\1033_ENU_LP\x86\setup\sqlsupport_msi\ !!!!
+ 
+ Action needed, re-establish the path to D:\17f2367ef5b54f0e3a369aaae371c387\PCUSOURCE\1033_ENU_LP\x86\setup\sqlsupport_msi\
+ 
+Installer Cache File: C:\Windows\Installer\8091682c.msi
+ 
+    Package exists in the Installer cache, no actions needed.
+    Any missing packages will update automatically if needed assuming that
+    the LastUsedSource exists.
+ 
+    Should you get errors about C:\Windows\Installer\8091682c.msi or D:\17f2367ef5b54f0e3a369aaae371c387\PCUSOURCE\1033_ENU_LP\x86\setup\sqlsupport_msi\SQLSUPPORT.MSI then you
+    may need to manually copy the file, if file exists replace the problem file, 
+    Copy and paste the following command line into an administrative command prompt:
+ 
+     Copy "D:\17f2367ef5b54f0e3a369aaae371c387\PCUSOURCE\1033_ENU_LP\x86\setup\sqlsupport_msi\SQLSUPPORT.MSI" C:\Windows\Installer\8091682c.msi
+ 
+ 
+Microsoft SQL Server 2012 Setup (English) Patches Installed 
+--------------------------------------------------------------------------------
+ 
+  No Patches Found
+ 

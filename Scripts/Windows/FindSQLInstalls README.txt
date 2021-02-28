@@ -1,0 +1,1 @@
+Cscript FindSQLInstalls.vbs %computername%_sql_install_details.txt
