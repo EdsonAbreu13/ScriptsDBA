@@ -5,12 +5,14 @@
 
 @system_databases ->	0 - para não gerar script das bases de sistema
 						1 - para gerar script das bases de sistema
+
+@intervalo_reducao -> Intervalo em MB que deseja gerar o shrink
 */
 
 
-DECLARE @base varchar(max) = NULL -- 'Traces'  
+DECLARE @base varchar(max) = 'Traces'
 		,@system_databases bit = 0 
-		
+		,@intervalo_reducao int = 50
 
 SET NOCOUNT ON;
 
@@ -57,20 +59,38 @@ SELECT *,ROW_NUMBER() OVER (PARTITION BY BASE, GROUP_ID ORDER BY BASE, GROUP_ID 
 SELECT * FROM #TEMP ORDER BY BASE, GROUP_ID DESC, ARQUIVO
 
 DECLARE @arquivo varchar(max)
-		,@espaco_min varchar(max)
-		,@espaco_usado varchar(max)
 		,@id int
-
+		,@controle_reducao int
+		,@espaco_livre int
+		,@espaco_min INT
+		,@espaco_alocado int
 
 WHILE (SELECT COUNT(1) FROM #TEMP) > 0
 	BEGIN
-		SELECT TOP 1 @base = BASE, @id = ID, @arquivo = ARQUIVO, @espaco_min = (ESPACO_UTILIZADO), @espaco_usado=FLOOR(TAMANHO_ARQUIVO) FROM #TEMP ORDER BY BASE, GROUP_ID DESC, ARQUIVO
+		SELECT TOP 1 @base = BASE, @id = ID, @arquivo = ARQUIVO, @espaco_alocado = FLOOR(TAMANHO_ARQUIVO), @espaco_min=FLOOR(ESPACO_UTILIZADO), @controle_reducao=FLOOR(TAMANHO_ARQUIVO),@espaco_livre=FLOOR(ESPACO_LIVRE) FROM #TEMP ORDER BY BASE, GROUP_ID DESC, ARQUIVO
 		PRINT 'USE ' + @base +'
 GO'
-		PRINT '--ESPAÇO MIN: ' + @espaco_min
-		PRINT 'DBCC SHRINKFILE (N'''+@arquivo+''', '+@espaco_usado+')
-GO'
 		PRINT ''
+		PRINT '--ESPAÇO ALOCADO: ' + CAST(@espaco_alocado AS VARCHAR(10)) + 'MB'
+		PRINT '--ESPAÇO UTILIZADO: ' + CAST(@espaco_min AS VARCHAR(10)) + 'MB'
+		PRINT ''
+
+
+		IF @espaco_alocado - @espaco_min > @intervalo_reducao
+		BEGIN
+			WHILE @controle_reducao > @espaco_min + @intervalo_reducao
+			BEGIN
+				SET @controle_reducao = @controle_reducao - @intervalo_reducao
+				PRINT 'DBCC SHRINKFILE (N'''+@arquivo+''', '+CAST(@controle_reducao AS VARCHAR(10))+')
+GO'				
+			END
+		END
+		PRINT ''
+		PRINT '--ESPAÇO LIVRE APOS SHRINK: ' + CAST(@controle_reducao - @espaco_min AS VARCHAR(10)) + 'MB'
+		PRINT ''
+		PRINT ''
+		PRINT ''
+		
 		DELETE FROM #TEMP WHERE ID = @id
 END
 

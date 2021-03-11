@@ -1,0 +1,1 @@
+runas /netonly /user:soumaster\usuario "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe"
