@@ -1,18 +1,6 @@
-
-/* PARAMETROS:
-@base ->	NULL - para gerar todas bases 
-			'Database' - informe o nome da base para gerar script somente dela
-
-@system_databases ->	0 - para não gerar script das bases de sistema
-						1 - para gerar script das bases de sistema
-
-@intervalo_reducao -> Intervalo em MB que deseja gerar o shrink
-*/
-
-
-DECLARE @base varchar(max) = 'Traces'
-		,@system_databases bit = 0 
-		,@intervalo_reducao int = 50
+DECLARE  @base varchar(max) = 'StackOverflow2010'		-- Nome da base, ou NULL para gerar de todas as bases
+		,@system_databases bit = 0						-- Caso queira gerar script para bases de sistema tambem, informe NULL no parametro anterior e 1 neste parametro
+		,@intervalo_reducao int = 50					-- Intervalo em MB que deseja gerar o shrink
 
 SET NOCOUNT ON;
 
