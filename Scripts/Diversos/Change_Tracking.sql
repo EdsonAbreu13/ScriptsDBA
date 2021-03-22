@@ -106,6 +106,9 @@ ON
 
 ----------------------------------------------------------------------------------
 
+SELECT db.name,ct.* FROM sys.change_tracking_databases ct JOIN sys.databases db ON db.database_id = ct.database_id
+
+
 select @@SERVERNAME AS server_name,
 sct2.name as schema_name,
 sot2.name as table_name,

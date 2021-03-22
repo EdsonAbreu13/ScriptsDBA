@@ -1,0 +1,3 @@
+. C:\temp\SqlConnection.ps1
+
+Test-ConnectTimes -ServerInstance SERVER_NAME -MaxExecutions 100 -RepeatMs 1000  | ft
